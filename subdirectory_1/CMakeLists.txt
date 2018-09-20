@@ -1,0 +1,12 @@
+set(sources sourcefile.cpp)
+set(linklibs lib1)
+set(properties " ")
+set(targets " ")
+
+# make each list a single argument
+foreach(varn IN LISTS "sources;linklibs;properties;targets")
+  listtoarg(${${varn}} ${${varn}_l})
+endforeach(varn)
+
+# build a shared library, install it and corresponding header files
+defBI(sources_l "SHARED" linklibs_l targets_l properties_l ON)
