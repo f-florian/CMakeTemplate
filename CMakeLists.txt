@@ -5,7 +5,7 @@ project(SampleProject VERSION 0.0 LANGUAGES CXX)
 # turn on debug settings
 set(debug ON)
 # pass version and name to the program as preprocessor definitions
-set(definitions cmake_MAJOR=${PROJECT_VERSION_MAJOR} cmake_MINOR=${PROJECT_VERSION_MINOR} cmake_NAME="${progname}")
+set(definitions cmake_MAJOR=${PROJECT_VERSION_MAJOR} cmake_MINOR=${PROJECT_VERSION_MINOR} cmake_NAME="${PROJECT_NAME}")
 # set compile options
 set(coptions -pipe -O2 -Werror)
 # set subdirectories to add
